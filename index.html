@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+NZ+Basic+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kalapastangan</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      function playSong() {
+        const audio = window.document.createElement("audio");
+        audio.src = "kalapastangan.mp3";
+        audio.autoplay = true;
+        window.document.body.append(audio);
+      }
+      playSong();
+    </script>
+  </body>
+</html>
