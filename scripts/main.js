@@ -13,14 +13,15 @@ heart.addEventListener(
     document.body.style.cursor = "none";
     setTimeout(() => {
       heart.classList.add("enter");
-      heart_holder.classList.add("enter");
     }, 100);
     document
       .querySelectorAll(".heart")
       .forEach((heart) => (heart.style.opacity = 0));
-    setTimeout(() => {
+    setTimeout(async () => {
       root.innerHTML = html_2;
-      play_lyrcis_1();
+      await new Promise((resolve) => {
+        play_lyrcis_1(resolve);
+      });
     }, 1000);
   },
   {
