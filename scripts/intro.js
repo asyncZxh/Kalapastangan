@@ -3,13 +3,12 @@ export function play_song() {
   audio.src = "kalapastangan.mp3";
   audio.autoplay = true;
   window.document.body.append(audio);
-  window.document.body.style.cursor = "none";
   window.console.log(":audio_playing");
 }
 
 export const html = `<div class="intro">
                 <div class="heart-container">
-                  <ion-icon name="heart" class="heart-main hm"></ion-icon>
+                  <ion-icon name="heart" class="heart-main"></ion-icon>
                   <div class="heart-holder">
                     <ion-icon name="heart" id="heart-main-inside"></ion-icon>
                     <ion-icon name="heart" class="heart heart-1"></ion-icon>

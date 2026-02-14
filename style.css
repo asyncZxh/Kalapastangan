@@ -16,11 +16,13 @@ body {
 }
 
 #root {
-  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  height: 100dvh;
 }
 .intro {
-  cursor: pointer;
   background-color: #000;
   height: 100%;
   width: 100%;
@@ -39,14 +41,12 @@ body {
   animation: rotate_mini_hearts 5s infinite linear;
 }
 
-.hm {
+.heart-main {
   position: absolute;
   height: 20rem;
   width: 20rem;
   z-index: 1;
-}
-
-.heart-main {
+  cursor: pointer;
   /* filter: drop-shadow(0 0 3px red); */
   color: #fff;
   animation: float 3s infinite;
@@ -57,10 +57,13 @@ body {
   transform: scale(20) rotate(0deg);
 }
 
+.heart-holder.enter {
+  transform: scale(20);
+}
+
 #heart-main-inside {
   height: 20rem;
   width: 20rem;
-  animation: float 3s infinite;
   transition: transform 3s ease;
   opacity: 0;
 }
@@ -145,4 +148,14 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.ly {
+  opacity: 0;
+  font-size: 3rem;
+}
+
+.ly.animate {
+  opacity: 1;
+  transition: all 0.5s;
 }
