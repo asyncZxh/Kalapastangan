@@ -10,158 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+NZ+Basic+Guides&display=swap"
       rel="stylesheet"
     />
+    <link href="style.css" rel="stylesheet" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+    <script src="scripts/intro.js" defer></script>
     <title>Kalapastangan</title>
-    <style>
-      :root {
-        font-size: 62.5%;
-        height: 100dvh;
-        --text_color: #f8f8f8;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        height: 100dvh;
-        font-family: "Lobster Two", sans-serif;
-        font-family: sans-serif;
-        position: relative;
-        overflow: hidden;
-      }
-      .intro {
-        cursor: pointer;
-        background-color: #000;
-        height: 100%;
-        width: 100%;
-      }
-
-      .heart-container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .heart-holder {
-        position: relative;
-        animation: rotate_mini_hearts 5s infinite linear;
-      }
-
-      .hm {
-        position: absolute;
-        height: 20rem;
-        width: 20rem;
-        z-index: 1;
-      }
-
-      .heart-main {
-        /* filter: drop-shadow(0 0 3px red); */
-        color: #fff;
-        animation: float 3s infinite;
-        transition: all 3s ease;
-      }
-
-      .heart-main.enter {
-        transform: scale(20) rotate(0deg);
-      }
-
-      #heart-main-inside {
-        height: 20rem;
-        width: 20rem;
-        animation: float 3s infinite;
-        transition: transform 3s ease;
-        opacity: 0;
-      }
-
-      .heart {
-        position: absolute;
-        height: 5rem;
-        width: 5rem;
-        color: #ff0000;
-        transition: all 0.5s;
-      }
-
-      .heart-1 {
-        top: -50%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .heart-2 {
-        top: -25%;
-        right: -25%;
-        transform: rotate(45deg);
-      }
-
-      .heart-3 {
-        top: 50%;
-        right: -50%;
-        transform: translateY(-50%) rotate(90deg);
-      }
-
-      .heart-4 {
-        bottom: -25%;
-        right: -25%;
-        transform: rotate(135deg);
-      }
-
-      .heart-5 {
-        bottom: -50%;
-        left: 50%;
-        transform: translateX(-50%) rotate(180deg);
-      }
-
-      .heart-6 {
-        bottom: -25%;
-        left: -25%;
-        transform: rotate(225deg);
-      }
-
-      .heart-7 {
-        top: 50%;
-        left: -50%;
-        transform: translateY(-50%) rotate(270deg);
-      }
-
-      .heart-8 {
-        top: -25%;
-        left: -25%;
-        transform: rotate(315deg);
-      }
-
-      @keyframes float {
-        0% {
-          transform: scale(1) rotate(0deg);
-        }
-        25% {
-          transform: scale(1.2) rotate(10deg);
-          color: #ff0000;
-        }
-        75% {
-          transform: scale(1.2) rotate(-10deg);
-          color: #ff0000;
-        }
-        100% {
-          transform: scale(1) rotate(0deg);
-        }
-      }
-
-      @keyframes rotate_mini_hearts {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="intro">
+    <!-- <div class="intro">
       <div class="heart-container">
         <ion-icon name="heart" class="heart-main hm"></ion-icon>
         <div class="heart-holder">
@@ -176,44 +40,6 @@
           <ion-icon name="heart" class="heart heart-8"></ion-icon>
         </div>
       </div>
-    </div>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-      defer
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-      defer
-    ></script>
-    <script>
-      function play_song() {
-        const audio = window.document.createElement("audio");
-        audio.src = "kalapastangan.mp3";
-        audio.autoplay = true;
-        window.document.body.append(audio);
-        window.document.body.style.cursor = "none";
-        window.console.log(":audio_playing");
-      }
-
-      const heart = window.document.querySelector(".heart-main");
-      heart.addEventListener(
-        "click",
-        () => {
-          window.console.log(":starting");
-          heart.style.animation = "none";
-          play_song();
-          setTimeout(() => heart.classList.add("enter"), 100);
-          window.document
-            .querySelectorAll(".heart")
-            .forEach((heart) => (heart.style.opacity = 0));
-        },
-        {
-          once: true,
-        },
-      );
-    </script>
+    </div> -->
   </body>
 </html>
