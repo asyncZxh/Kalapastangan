@@ -1,4 +1,4 @@
-function play_song() {
+export function play_song() {
   const audio = window.document.createElement("audio");
   audio.src = "kalapastangan.mp3";
   audio.autoplay = true;
@@ -7,7 +7,7 @@ function play_song() {
   window.console.log(":audio_playing");
 }
 
-const html = `<div class="intro">
+export const html = `<div class="intro">
                 <div class="heart-container">
                   <ion-icon name="heart" class="heart-main hm"></ion-icon>
                   <div class="heart-holder">
@@ -23,20 +23,3 @@ const html = `<div class="intro">
                   </div>
                 </div>
               </div>`;
-document.body.innerHTML = html;
-const heart = window.document.querySelector(".heart-main");
-heart.addEventListener(
-  "click",
-  () => {
-    window.console.log(":starting");
-    heart.style.animation = "none";
-    play_song();
-    setTimeout(() => heart.classList.add("enter"), 100);
-    window.document
-      .querySelectorAll(".heart")
-      .forEach((heart) => (heart.style.opacity = 0));
-  },
-  {
-    once: true,
-  },
-);
