@@ -11,11 +11,13 @@
 }
 
 body {
-  height: 100dvh;
   font-family: "Lobster Two", sans-serif;
-  font-family: sans-serif;
-  position: relative;
   overflow: hidden;
+}
+
+#root {
+  height: 100dvh;
+  position: relative;
 }
 .intro {
   cursor: pointer;
