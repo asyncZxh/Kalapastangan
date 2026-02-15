@@ -117,13 +117,13 @@ export async function play_lyrics(done) {
   })
     .then(async () => {
       await new Promise((resolve) => {
-        setTimeout(() => resolve(), 1000);
+        setTimeout(() => resolve(), 2000);
       });
     })
     .then(async () => {
       document.querySelector(".lyrics").classList.add("out");
       await new Promise((resolve) => {
-        setTimeout(() => resolve(), 1500);
+        setTimeout(() => resolve(), 500);
       });
     });
 
@@ -189,13 +189,13 @@ export async function play_lyrics(done) {
   })
     .then(async () => {
       await new Promise((resolve) => {
-        setTimeout(() => resolve(), 1000);
+        setTimeout(() => resolve(), 2000);
       });
     })
     .then(async () => {
       document.querySelector(".lyrics").classList.add("out");
       await new Promise((resolve) => {
-        setTimeout(() => resolve(), 1000);
+        setTimeout(() => resolve(), 2000);
       });
     })
     .then(() => {
