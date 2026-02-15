@@ -1,5 +1,7 @@
 import { html as html_1, play_song } from "./intro.js";
-import { html as html_2, play_lyrics as play_lyrcis_1 } from "./L1.js";
+import { html as html_2, play_lyrics as play_lyrics_1 } from "./L1.js";
+import { play_lyrics as play_lyrics_2 } from "./L2.js";
+
 const root = document.getElementById("root");
 root.innerHTML = html_1;
 
@@ -17,10 +19,12 @@ heart.addEventListener(
     document
       .querySelectorAll(".heart")
       .forEach((heart) => (heart.style.opacity = 0));
-    setTimeout(async () => {
+    setTimeout(() => {
       root.innerHTML = html_2;
-      await new Promise((resolve) => {
-        play_lyrcis_1(resolve);
+      new Promise((resolve) => {
+        play_lyrics_1(resolve);
+      }).then(() => {
+        play_lyrics_2();
       });
     }, 1000);
   },
