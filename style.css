@@ -21,7 +21,7 @@ body {
   align-items: center;
   position: relative;
   height: 100dvh;
-  transition: all 5s;
+  transition: all 3s;
 }
 .intro {
   background-color: #000;
@@ -154,6 +154,7 @@ body {
 .ly {
   opacity: 0;
   font-size: 4rem;
+  filter: blur(0.5px);
 }
 
 .ly.animate {
