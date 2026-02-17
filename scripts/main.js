@@ -6,6 +6,7 @@ const root = document.getElementById("root");
 root.innerHTML = html_1;
 
 const heart = document.querySelector(".heart-main");
+
 heart.addEventListener(
   "click",
   () => {
@@ -26,7 +27,7 @@ heart.addEventListener(
       }).then(() => {
         play_lyrics_2();
       });
-    }, 1000);
+    }, 800);
   },
   {
     once: true,

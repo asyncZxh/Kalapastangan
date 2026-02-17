@@ -157,7 +157,19 @@ body {
   filter: blur(0.5px);
 }
 
+.lyv2 {
+  /* opacity: 0; */
+  color: #fff;
+  font-size: 3rem;
+  filter: blur(0.5px);
+}
+
 .ly.animate {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.lyv2.animate {
   opacity: 1;
   transition: all 0.5s;
 }
