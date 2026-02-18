@@ -204,7 +204,7 @@ export async function play_lyrics(done) {
         setTimeout(() => {
           console.log("L1 done");
           done();
-        }, 1000);
+        }, 700);
       });
     });
 }

@@ -48,18 +48,13 @@ body {
   width: 20rem;
   z-index: 1;
   cursor: pointer;
-  /* filter: drop-shadow(0 0 3px red); */
   color: #fff;
   animation: float 3s infinite;
   transition: all 3s ease;
 }
 
 .heart-main.enter {
-  transform: scale(20) rotate(0deg);
-}
-
-.heart-holder.enter {
-  transform: scale(20);
+  transform: scale(30) rotate(0deg);
 }
 
 #heart-main-inside {
@@ -155,29 +150,186 @@ body {
   opacity: 0;
   font-size: 4rem;
   filter: blur(0.5px);
+  transition: all 0.5s;
 }
 
 .lyv2 {
-  /* opacity: 0; */
+  opacity: 0;
   color: #fff;
   font-size: 3rem;
-  filter: blur(0.5px);
+  filter: blur(0.3px);
+  transition: all 0.5s;
 }
 
 .ly.animate {
   opacity: 1;
-  transition: all 0.5s;
 }
 
 .lyv2.animate {
   opacity: 1;
-  transition: all 0.5s;
 }
 
-.lyrics {
+.lyrics,
+.lyrics-v2 {
   transition: all 0.5s;
 }
 
 .lyrics.out {
   opacity: 0;
+}
+
+.flower-holder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.flower_A {
+  opacity: 0;
+  position: absolute;
+}
+
+.flower_1 {
+  height: 23rem;
+  width: 20rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flower_2 {
+  height: 17rem;
+  width: 20rem;
+  bottom: -1rem;
+  left: -1.5%;
+  transform: rotateY(130deg);
+}
+
+.flower_3 {
+  height: 15rem;
+  width: 16rem;
+  bottom: -1rem;
+  right: 0%;
+  transform: rotateY(180deg);
+}
+
+.flower_4 {
+  height: 14rem;
+  width: 15rem;
+  bottom: -1rem;
+  left: 20%;
+}
+.flower_5 {
+  height: 20rem;
+  width: 18rem;
+  bottom: -1rem;
+  left: 10%;
+}
+.flower_6 {
+  height: 19rem;
+  width: 17rem;
+  bottom: -1rem;
+  left: 30%;
+  transform: rotateY(180deg);
+}
+.flower_7 {
+  height: 16rem;
+  width: 17rem;
+  bottom: -1rem;
+  left: 53%;
+}
+.flower_8 {
+  height: 20rem;
+  width: 18rem;
+  bottom: -1rem;
+  left: 65%;
+  transform: rotateY(180deg);
+}
+.flower_9 {
+  height: 17rem;
+  width: 17rem;
+  bottom: -1rem;
+  left: 75%;
+}
+.flower_10 {
+  height: 12rem;
+  width: 12rem;
+  bottom: -1rem;
+  left: 95%;
+}
+
+.flower_11 {
+  height: 10rem;
+  width: 9rem;
+  bottom: -1rem;
+  left: -2%;
+}
+.flower_12 {
+  height: 12rem;
+  width: 8rem;
+  bottom: -1rem;
+  left: 7%;
+  transform: rotateY(20deg);
+}
+.flower_13 {
+  height: 11rem;
+  width: 11rem;
+  bottom: -1rem;
+  left: 16%;
+  transform: rotateY(180deg);
+}
+.flower_14 {
+  height: 9rem;
+  width: 11rem;
+  bottom: -1rem;
+  left: 28%;
+  transform: rotateY(180deg);
+}
+.flower_15 {
+  height: 14rem;
+  width: 14rem;
+  bottom: -1rem;
+  left: 36%;
+}
+.flower_16 {
+  height: 7rem;
+  width: 6rem;
+  bottom: -1rem;
+  left: 43%;
+  transform: rotateY(180deg);
+}
+.flower_17 {
+  height: 12rem;
+  width: 10rem;
+  bottom: -1rem;
+  left: 49%;
+}
+.flower_18 {
+  height: 11rem;
+  width: 10rem;
+  bottom: -1rem;
+  left: 62%;
+  transform: rotateY(180deg);
+}
+.flower_19 {
+  height: 10rem;
+  width: 10rem;
+  bottom: -1rem;
+  left: 83%;
+}
+.flower_20 {
+  height: 7rem;
+  width: 7rem;
+  bottom: -1rem;
+  left: 88%;
+  transform: rotateY(180deg);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
 }
