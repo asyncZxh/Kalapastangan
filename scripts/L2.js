@@ -60,7 +60,7 @@ async function lyrics_1(resolve) {
   await new Promise((resolve) => {
     setTimeout(
       () => document.querySelector(".lyv2-1").classList.add("animate"),
-      10,
+      20,
     );
     resolve();
   }).then(async () => {
@@ -156,7 +156,7 @@ async function lyrics_2(resolve) {
   await new Promise((resolve) => {
     setTimeout(
       () => document.querySelector(".lyv3-1").classList.add("animate"),
-      10,
+      20,
     );
     resolve();
   }).then(async () => {
@@ -295,7 +295,7 @@ async function lyrics_3(resolve) {
   await new Promise((resolve) => {
     setTimeout(
       () => document.querySelector(".lyv4-1").classList.add("animate"),
-      10,
+      20,
     );
     resolve();
   }).then(async () => {
@@ -390,7 +390,7 @@ async function lyrics_4(resolve) {
   container.classList.add("lyrics-v5");
   document.querySelector(".container-v2").append(container);
   document.querySelector(".lyrics-v5").style.top = "30%";
-  document.querySelector(".lyrics-v5").style.right = "10%";
+  document.querySelector(".lyrics-v5").style.right = "12%";
   const lyrics = [
     "Ka",
     "pag ",
@@ -412,7 +412,7 @@ async function lyrics_4(resolve) {
   await new Promise((resolve) => {
     setTimeout(
       () => document.querySelector(".lyv5-1").classList.add("animate"),
-      10,
+      20,
     );
     resolve();
   }).then(async () => {
@@ -426,7 +426,7 @@ async function lyrics_4(resolve) {
     resolve();
   }).then(async () => {
     await new Promise((reslove) => {
-      setTimeout(() => reslove(), 400);
+      setTimeout(() => reslove(), 200);
     });
   });
 
@@ -453,7 +453,7 @@ async function lyrics_4(resolve) {
     resolve();
   }).then(async () => {
     await new Promise((reslove) => {
-      setTimeout(() => reslove(), 200);
+      setTimeout(() => reslove(), 300);
     });
   });
 
@@ -489,16 +489,16 @@ async function lyrics_4(resolve) {
     resolve();
   }).then(async () => {
     await new Promise((reslove) => {
-      setTimeout(() => reslove(), 700);
+      setTimeout(() => reslove(), 600);
     });
   });
 
   await new Promise((resolve) => {
-    document.querySelector(".lyv5-10").classList.add("animate");
+    document.querySelector(".lyv5-10").classList.add("animatev5");
     resolve();
   }).then(async () => {
     await new Promise((reslove) => {
-      setTimeout(() => reslove(), 400);
+      setTimeout(() => reslove(), 1500);
     });
   });
   resolve();
@@ -509,6 +509,12 @@ async function lyrics_4(resolve) {
 }
 
 async function lyrics_5(resolve) {
+  const container = document.createElement("div");
+  container.classList.add("lyrics-v6");
+  document.querySelector(".container-v2").append(container);
+  document.querySelector(".lyrics-v6").style.top = "50%";
+  document.querySelector(".lyrics-v6").style.left = "25%";
+
   const lyrics = [
     "Ka",
     "la",
@@ -522,21 +528,199 @@ async function lyrics_5(resolve) {
   ];
   lyrics.forEach(
     (element, index) =>
-      (document.querySelector(".lyrics-v2").innerHTML +=
-        `<span class="lyv2 lyv2-${index + 1}">${element}</span>`),
+      (document.querySelector(".lyrics-v6").innerHTML +=
+        `<span class="lyv6 lyv6-${index + 1}">${element}</span>`),
+  );
+
+  await new Promise((resolve) => {
+    setTimeout(
+      () => document.querySelector(".lyv6-1").classList.add("animate"),
+      20,
+    );
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-2").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 500);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-3").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-4").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-5").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-6").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-7").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-8").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv6-9").classList.add("animatev6");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 1500);
+    });
+  });
+  resolve();
+  setTimeout(
+    () => document.querySelector(".lyrics-v6").classList.add("out"),
+    1800,
   );
 }
 
 async function lyrics_6(resolve) {
+  const container = document.createElement("div");
+  container.classList.add("lyrics-v7");
+  document.querySelector(".container-v2").append(container);
+  document.querySelector(".lyrics-v7").style.top = "15%";
+  document.querySelector(".lyrics-v7").style.left = "10%";
   const lyrics = ["Ka", "lo", "ko", "han ", "ang ", "'di ", "ka ", "isipin"];
   lyrics.forEach(
     (element, index) =>
-      (document.querySelector(".lyrics-v2").innerHTML +=
-        `<span class="lyv2 lyv2-${index + 1}">${element}</span>`),
+      (document.querySelector(".lyrics-v7").innerHTML +=
+        `<span class="lyv7 lyv7-${index + 1}">${element}</span>`),
+  );
+  await new Promise((resolve) => {
+    setTimeout(
+      () => document.querySelector(".lyv7-1").classList.add("animate"),
+      20,
+    );
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-2").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-3").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-4").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-5").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-6").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-7").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv7-8").classList.add("animatev7");
+    resolve();
+  }).then(async () => {
+    await new Promise((reslove) => {
+      setTimeout(() => reslove(), 2000);
+    });
+  });
+  resolve();
+  setTimeout(
+    () => document.querySelector(".lyrics-v7").classList.add("out"),
+    1800,
   );
 }
 
 async function lyrics_7(resolve) {
+  const container = document.createElement("div");
+  container.classList.add("lyrics-v8");
+  document.querySelector(".container-v2").append(container);
+  document.querySelector(".lyrics-v8").style.top = "20%";
+  document.querySelector(".lyrics-v8").style.right = "20%";
   const lyrics = [
     "Kung ",
     "ang ",
@@ -549,16 +733,209 @@ async function lyrics_7(resolve) {
   ];
   lyrics.forEach(
     (element, index) =>
-      (document.querySelector(".lyrics-v2").innerHTML +=
-        `<span class="lyv2 lyv2-${index + 1}">${element}</span>`),
+      (document.querySelector(".lyrics-v8").innerHTML +=
+        `<span class="lyv8 lyv8-${index + 1}">${element}</span>`),
+  );
+  await new Promise((resolve) => {
+    setTimeout(
+      () => document.querySelector(".lyv8-1").classList.add("animate"),
+      20,
+    );
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-2").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-3").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 150);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-4").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 500);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-5").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-6").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-7").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv8-8").classList.add("animatev8");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 2300);
+    });
+  });
+  resolve();
+  setTimeout(
+    () => document.querySelector(".lyrics-v8").classList.add("out"),
+    500,
   );
 }
 
 async function lyrics_8(resolve) {
-  const lyrics = ["Ikaw ", "ang ", "una ", "kong ", "ha", "ha", "na", "pin"];
+  const container = document.createElement("div");
+  container.classList.add("lyrics-v9");
+  document.querySelector(".container-v2").append(container);
+  document.querySelector(".lyrics-v9").style.top = "40%";
+  document.querySelector(".lyrics-v9").style.left = "30%";
+  const lyrics = [
+    "I",
+    "kaw ",
+    "ang ",
+    "u",
+    "na ",
+    "kong ",
+    "ha",
+    "ha",
+    "na",
+    "pin",
+  ];
   lyrics.forEach(
     (element, index) =>
-      (document.querySelector(".lyrics-v2").innerHTML +=
-        `<span class="lyv2 lyv2-${index + 1}">${element}</span>`),
+      (document.querySelector(".lyrics-v9").innerHTML +=
+        `<span class="lyv9 lyv9-${index + 1}">${element}</span>`),
+  );
+
+  await new Promise((resolve) => {
+    setTimeout(
+      () => document.querySelector(".lyv9-1").classList.add("animate"),
+      20,
+    );
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 300);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-2").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 200);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-3").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 300);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-4").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 300);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-5").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 300);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-6").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 400);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-7").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 1000);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-8").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 300);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-9").classList.add("animate");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 300);
+    });
+  });
+
+  await new Promise((resolve) => {
+    document.querySelector(".lyv9-10").classList.add("animatev9");
+    resolve();
+  }).then(async () => {
+    await new Promise((resolve) => {
+      setTimeout(() => resolve(), 2143);
+    });
+  });
+  resolve();
+  setTimeout(
+    () => document.querySelector(".lyrics-v9").classList.add("out"),
+    500,
   );
 }
