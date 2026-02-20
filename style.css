@@ -44,11 +44,6 @@ body {
   align-items: center;
 }
 
-.heart-holder {
-  position: relative;
-  animation: rotate_mini_hearts 7s infinite linear;
-}
-
 .heart-main {
   position: absolute;
   height: 20rem;
@@ -134,10 +129,12 @@ body {
   25% {
     transform: scale(1.2) rotate(10deg);
     color: #525252;
+    filter: drop-shadow(0 0 50px #dbdbdb);
   }
   75% {
     transform: scale(1.2) rotate(-10deg);
     color: #525252;
+    filter: drop-shadow(0 0 25px #dbdbdb);
   }
   100% {
     transform: scale(1) rotate(0deg);
@@ -596,41 +593,22 @@ body {
 .flowerX_.bloom {
   height: 37rem;
   width: 37rem;
-  top: 1%;
+  bottom: -5%;
   right: 1%;
   transform: rotate(-45deg);
   animation:
-    riseV2 30s forwards 1s,
+    riseV2 18s forwards 1s,
     glow 5s linear infinite,
-    floatV2 5s ease-in-out infinite;
+    floatV2 5s ease-in-out infinite,
+    up 8s ease-out forwards;
 }
-/* .flowerX_2.fall {
-  height: 30rem;
-  width: 30rem;
-  top: 10%;
-  left: 1%;
-  transform: rotate(30deg);
-  animation:
-    riseV2 15s forwards 1s,
-    glow 2s linear infinite;
-}
-.flowerX_3.fall {
-  height: 30rem;
-  width: 30rem;
-  top: 10%;
-  right: 1%;
-  transform: rotate(-30deg);
-  animation:
-    riseV2 15s forwards 1s,
-    glow linear infinite;
-} */
 
 @keyframes riseV2 {
   from {
     opacity: 0;
   }
   to {
-    opacity: 0.23;
+    opacity: 0.26143;
   }
 }
 
@@ -649,5 +627,11 @@ body {
   }
   100% {
     transform: rotate(-45deg) translateY(0);
+  }
+}
+
+@keyframes up {
+  to {
+    bottom: 30%;
   }
 }
