@@ -75,7 +75,7 @@ body {
   position: absolute;
   height: 5rem;
   width: 5rem;
-  color: #ff0000;
+  color: #525252;
   transition: all 0.5s;
 }
 
@@ -133,11 +133,11 @@ body {
   }
   25% {
     transform: scale(1.2) rotate(10deg);
-    color: #ff0000;
+    color: #525252;
   }
   75% {
     transform: scale(1.2) rotate(-10deg);
-    color: #ff0000;
+    color: #525252;
   }
   100% {
     transform: scale(1) rotate(0deg);
@@ -589,124 +589,65 @@ body {
 }
 
 .flower_B {
-  height: 7rem;
-  width: 7rem;
-  opacity: 0.15;
+  opacity: 0;
   position: absolute;
-  top: -200px;
-  left: 50%;
 }
 
-.flowerX_1.fall {
+.flowerX_.bloom {
+  height: 37rem;
+  width: 37rem;
+  top: 1%;
+  right: 1%;
+  transform: rotate(-45deg);
+  animation:
+    riseV2 30s forwards 1s,
+    glow 5s linear infinite,
+    floatV2 5s ease-in-out infinite;
 }
-.flowerX_2.fall {
+/* .flowerX_2.fall {
+  height: 30rem;
+  width: 30rem;
+  top: 10%;
+  left: 1%;
+  transform: rotate(30deg);
+  animation:
+    riseV2 15s forwards 1s,
+    glow 2s linear infinite;
 }
 .flowerX_3.fall {
-}
-.flowerX_4.fall {
-}
-.flowerX_5.fall {
-}
-.flowerX_6.fall {
-}
-.flowerX_7.fall {
-}
-.flowerX_8.fall {
-}
-.flowerX_9.fall {
-}
-.flowerX_10.fall {
-}
-.flowerX_11.fall {
-}
-.flowerX_12.fall {
-}
-.flowerX_13.fall {
-}
-.flowerX_14.fall {
-}
-.flowerX_15.fall {
-}
-.flowerX_16.fall {
-}
-.flowerX_17.fall {
-}
-.flowerX_18.fall {
-}
-.flowerX_19.fall {
-}
-.flowerX_20.fall {
-}
-.flowerX_21.fall {
-}
-.flowerX_22.fall {
-}
-.flowerX_23.fall {
-}
-.flowerX_24.fall {
-}
-.flowerX_25.fall {
-}
-.flowerX_26.fall {
-}
-.flowerX_27.fall {
-}
-.flowerX_28.fall {
-}
-.flowerX_29.fall {
-}
-.flowerX_30.fall {
-}
-.flowerX_31.fall {
-}
-.flowerX_32.fall {
-}
-.flowerX_33.fall {
-}
-.flowerX_34.fall {
-}
-.flowerX_35.fall {
-}
-.flowerX_36.fall {
-}
-.flowerX_37.fall {
-}
-.flowerX_38.fall {
-}
-.flowerX_39.fall {
-}
-.flowerX_40.fall {
-}
-.flowerX_41.fall {
-}
-.flowerX_42.fall {
-}
-.flowerX_43.fall {
-}
-.flowerX_44.fall {
-}
-.flowerX_45.fall {
-}
-.flowerX_46.fall {
-}
-.flowerX_47.fall {
-}
-.flowerX_48.fall {
-}
-.flowerX_49.fall {
-}
-.flowerX_50.fall {
-}
+  height: 30rem;
+  width: 30rem;
+  top: 10%;
+  right: 1%;
+  transform: rotate(-30deg);
+  animation:
+    riseV2 15s forwards 1s,
+    glow linear infinite;
+} */
 
-@keyframes fall {
+@keyframes riseV2 {
+  from {
+    opacity: 0;
+  }
   to {
-    top: 100%;
+    opacity: 0.23;
   }
 }
 
-@keyframes rotate {
+@keyframes glow {
+  50% {
+    filter: drop-shadow(0 0 8px #fff);
+  }
+}
+
+@keyframes floatV2 {
   0% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translate(-8px, 8px);
   }
   100% {
+    transform: rotate(-45deg) translateY(0);
   }
 }

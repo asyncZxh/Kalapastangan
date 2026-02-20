@@ -22,10 +22,10 @@ function generate_background() {
     const flower = `<img src="flower_2.png" class="flower_A flower_${i}">`;
     document.querySelector(".flower-holder").innerHTML += flower;
   }
-  for (let i = 1; i <= 50; i++) {
-    const flower = `<img src="flower_1.png" class="flower_B flowerX_${i}">`;
-    document.querySelector(".flower-holder").innerHTML += flower;
-  }
+
+  const flower = `<img src="flower_1.png" class="flower_B flowerX_">`;
+  document.querySelector(".flower-holder").innerHTML += flower;
+
   for (let i = 1; i <= 30; i++) {
     const flower = document.querySelector(`.flower_${i}`);
     flower.style.animation = "rise";
@@ -34,13 +34,10 @@ function generate_background() {
     flower.style.animationTimingFunction = "ease-in-out";
     flower.style.animationFillMode = "forwards";
   }
-
-  // setTimeout(() => {}, 0);
-  // falling flower effects here
-  for (let i = 1; i <= 50; i++) {
-    const flower = document.querySelector(`.flowerX_${i}`);
-    flower.style.display = "none";
-  }
+  setTimeout(
+    () => document.querySelector(`.flowerX_`).classList.add("bloom"),
+    16000,
+  );
 }
 
 async function lyrics_1(resolve) {
