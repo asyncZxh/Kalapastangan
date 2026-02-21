@@ -202,7 +202,7 @@ export async function play_lyrics(done) {
       document.querySelector("#root").style.backgroundColor = "#000";
       new Promise(() => {
         setTimeout(() => {
-          console.log("L1 done");
+          console.log(":L1_done");
           done();
         }, 700);
       });

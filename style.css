@@ -596,7 +596,7 @@ body {
 
 @keyframes upDown {
   50% {
-    transform: translateY(8px);
+    transform: translateY(5px);
   }
 }
 

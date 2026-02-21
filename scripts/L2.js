@@ -36,6 +36,7 @@ function generate_background() {
     flowerBox.style.animationTimingFunction = "ease-in-out";
     flowerBox.style.animationFillMode = "forwards";
   }
+  console.log(":flowers_rise");
   for (let i = 1; i <= 30; i++) {
     const flower = document.querySelector(`.flower_${i}`);
     flower.style.animation = "upDown";
@@ -44,10 +45,10 @@ function generate_background() {
     flower.style.animationTimingFunction = "ease-in-out";
     flower.style.animationIterationCount = "infinite";
   }
-  setTimeout(
-    () => document.querySelector(`.flowerX_`).classList.add("bloom"),
-    16000,
-  );
+  setTimeout(() => {
+    document.querySelector(`.flowerX_`).classList.add("bloom");
+    console.log(":moon_flower_rise");
+  }, 16000);
 }
 
 async function lyrics_1(resolve) {
@@ -940,6 +941,7 @@ async function lyrics_8(resolve) {
       setTimeout(() => resolve(), 2143);
     });
   });
+  console.log(":L2_done");
   resolve();
   setTimeout(
     () => document.querySelector(".lyrics-v9").classList.add("out"),
