@@ -19,7 +19,9 @@ function generate_background() {
   const html = '<div class="flower-holder"></div>';
   root.innerHTML += html;
   for (let i = 1; i <= 30; i++) {
-    const flower = `<img src="flower_2.png" class="flower_A flower_${i}">`;
+    const flower = `<div class="flowerBox flower_box${i}">
+                      <img src="flower_2.png" class="flower_A flower_${i}">
+                    </div>`;
     document.querySelector(".flower-holder").innerHTML += flower;
   }
 
@@ -27,12 +29,20 @@ function generate_background() {
   document.querySelector(".flower-holder").innerHTML += flower;
 
   for (let i = 1; i <= 30; i++) {
+    const flowerBox = document.querySelector(`.flower_box${i}`);
+    flowerBox.style.animation = "rise";
+    flowerBox.style.animationDuration = "2.5s";
+    flowerBox.style.animationDelay = `${i / 2}s`;
+    flowerBox.style.animationTimingFunction = "ease-in-out";
+    flowerBox.style.animationFillMode = "forwards";
+  }
+  for (let i = 1; i <= 30; i++) {
     const flower = document.querySelector(`.flower_${i}`);
-    flower.style.animation = "rise";
-    flower.style.animationDuration = "2.5s";
-    flower.style.animationDelay = `${i / 2}s`;
+    flower.style.animation = "upDown";
+    flower.style.animationDuration = "3.8s";
+    flower.style.animationDelay = `${(i * 0.6) / 2}s`;
     flower.style.animationTimingFunction = "ease-in-out";
-    flower.style.animationFillMode = "forwards";
+    flower.style.animationIterationCount = "infinite";
   }
   setTimeout(
     () => document.querySelector(`.flowerX_`).classList.add("bloom"),

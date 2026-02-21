@@ -131,6 +131,9 @@ body {
     color: #525252;
     filter: drop-shadow(0 0 50px #dbdbdb);
   }
+  50% {
+    color: #525252;
+  }
   75% {
     transform: scale(1.2) rotate(-10deg);
     color: #525252;
@@ -369,13 +372,19 @@ body {
   width: 100%;
 }
 
-.flower_A {
-  opacity: 0;
+.flowerBox {
   position: absolute;
+  opacity: 0;
   z-index: 1;
 }
 
-.flower_1 {
+.flower_A {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.flower_box1 {
   height: 23rem;
   width: 20rem;
   bottom: -1rem;
@@ -383,7 +392,7 @@ body {
   transform: translateX(-50%);
 }
 
-.flower_2 {
+.flower_box2 {
   height: 17rem;
   width: 20rem;
   bottom: -1rem;
@@ -391,7 +400,7 @@ body {
   transform: rotateY(130deg);
 }
 
-.flower_3 {
+.flower_box3 {
   height: 15rem;
   width: 16rem;
   bottom: -1rem;
@@ -399,177 +408,177 @@ body {
   transform: rotateY(180deg);
 }
 
-.flower_4 {
+.flower_box4 {
   height: 14rem;
   width: 15rem;
   bottom: -1rem;
   left: 20%;
 }
-.flower_5 {
+.flower_box5 {
   height: 20rem;
   width: 18rem;
   bottom: -1rem;
   left: 10%;
 }
-.flower_6 {
+.flower_box6 {
   height: 19rem;
   width: 17rem;
   bottom: -1rem;
   left: 30%;
   transform: rotateY(180deg);
 }
-.flower_7 {
+.flower_box7 {
   height: 16rem;
   width: 17rem;
   bottom: -1rem;
   left: 53%;
 }
-.flower_8 {
+.flower_box8 {
   height: 20rem;
   width: 18rem;
   bottom: -1rem;
   left: 65%;
   transform: rotateY(180deg);
 }
-.flower_9 {
+.flower_box9 {
   height: 17rem;
   width: 17rem;
   bottom: -1rem;
   left: 75%;
 }
-.flower_10 {
+.flower_box10 {
   height: 12rem;
   width: 12rem;
   bottom: -1rem;
   left: 95%;
 }
 
-.flower_11 {
+.flower_box11 {
   height: 10rem;
   width: 9rem;
   bottom: -1rem;
   left: -2%;
 }
-.flower_12 {
+.flower_box12 {
   height: 12rem;
   width: 8rem;
   bottom: -1rem;
   left: 7%;
   transform: rotateY(20deg);
 }
-.flower_13 {
+.flower_box13 {
   height: 11rem;
   width: 11rem;
   bottom: -1rem;
   left: 16%;
   transform: rotateY(180deg);
 }
-.flower_14 {
+.flower_box14 {
   height: 9rem;
   width: 11rem;
   bottom: -1rem;
   left: 28%;
   transform: rotateY(180deg);
 }
-.flower_15 {
+.flower_box15 {
   height: 14rem;
   width: 14rem;
   bottom: -1rem;
   left: 36%;
 }
-.flower_16 {
+.flower_box16 {
   height: 7rem;
   width: 6rem;
   bottom: -1rem;
   left: 43%;
   transform: rotateY(180deg);
 }
-.flower_17 {
+.flower_box17 {
   height: 12rem;
   width: 10rem;
   bottom: -1rem;
   left: 49%;
 }
-.flower_18 {
+.flower_box18 {
   height: 11rem;
   width: 10rem;
   bottom: -1rem;
   left: 62%;
   transform: rotateY(180deg);
 }
-.flower_19 {
+.flower_box19 {
   height: 10rem;
   width: 10rem;
   bottom: -1rem;
   left: 83%;
 }
-.flower_20 {
+.flower_box20 {
   height: 7rem;
   width: 7rem;
   bottom: -1rem;
   left: 88%;
   transform: rotateY(180deg);
 }
-.flower_21 {
+.flower_box21 {
   height: 6rem;
   width: 7rem;
   bottom: -1rem;
   left: 60%;
   transform: rotateY(180deg);
 }
-.flower_22 {
+.flower_box22 {
   height: 7rem;
   width: 7rem;
   bottom: -1rem;
   left: 67%;
 }
-.flower_23 {
+.flower_box23 {
   height: 7rem;
   width: 7rem;
   bottom: -1rem;
   left: 74%;
   transform: rotateY(180deg);
 }
-.flower_24 {
+.flower_box24 {
   height: 5rem;
   width: 4rem;
   bottom: -1rem;
   left: 3%;
   transform: rotateY(180deg);
 }
-.flower_25 {
+.flower_box25 {
   height: 7rem;
   width: 7rem;
   bottom: -1rem;
   left: 10%;
 }
-.flower_26 {
+.flower_box26 {
   height: 5rem;
   width: 4rem;
   bottom: -1rem;
   left: 27%;
 }
-.flower_27 {
+.flower_box27 {
   height: 5rem;
   width: 5rem;
   bottom: -1rem;
   left: 16%;
 }
-.flower_28 {
+.flower_box28 {
   height: 6rem;
   width: 6rem;
   bottom: -1rem;
   left: 53%;
   transform: rotateY(180deg);
 }
-.flower_29 {
+.flower_box29 {
   height: 4rem;
   width: 4rem;
   bottom: -1rem;
   left: 81%;
   transform: rotateY(180deg);
 }
-.flower_30 {
+.flower_box30 {
   height: 4rem;
   width: 3rem;
   bottom: -1rem;
@@ -585,17 +594,23 @@ body {
   }
 }
 
+@keyframes upDown {
+  50% {
+    transform: translateY(8px);
+  }
+}
+
 .flower_B {
-  opacity: 0;
+  height: 37rem;
+  width: 37rem;
   position: absolute;
+  right: 1%;
+  bottom: -5%;
+  opacity: 0;
+  transform: rotate(-45deg);
 }
 
 .flowerX_.bloom {
-  height: 37rem;
-  width: 37rem;
-  bottom: -5%;
-  right: 1%;
-  transform: rotate(-45deg);
   animation:
     riseV2 18s forwards 1s,
     glow 5s linear infinite,
@@ -608,7 +623,7 @@ body {
     opacity: 0;
   }
   to {
-    opacity: 0.26143;
+    opacity: 0.27143;
   }
 }
 
