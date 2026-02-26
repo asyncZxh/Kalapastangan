@@ -13,6 +13,7 @@
 body {
   font-family: "Lobster Two", sans-serif;
   overflow: hidden;
+  user-select: none;
 }
 
 #root {
